@@ -1,0 +1,83 @@
+@import 'esoptra/colors';
+
+.toc-wrapper {
+  .logo {
+    margin: 15px;
+  }
+
+  > .search {
+    &:before {
+      color: $esoptra-color-white;
+    }
+
+    input {
+      border-color: $esoptra-color-black-translucent;
+
+      &::placeholder {
+        color: $esoptra-color-white-translucent;
+      }
+    }
+  }
+
+  .toc-footer {
+    border-top-color: $esoptra-color-black-translucent;
+    border-top-style: solid;
+  }
+}
+
+.content {
+  h1 {
+    background-color: $esoptra-color-white;
+    border-bottom: 0;
+    border-top: 0;
+  }
+
+  h2 {
+    background-image: none;
+    border-color: $esoptra-color-grey;
+  }
+
+  aside {
+    background-color: fade-out($esoptra-color-state-info, .6);
+
+    &.success {
+      background-color: fade-out($esoptra-color-state-success, .6);
+    }
+
+    &.warning {
+      background-color: fade-out($esoptra-color-state-warning, .6);
+    }
+  }
+
+  table {
+    th {
+      border-bottom: 0;
+    }
+
+    tr {
+      &:nth-child(odd) > td {
+        background-color: $esoptra-color-white;
+      }
+
+      &:nth-child(even) > td {
+        background-color: $esoptra-color-white-translucent;
+      }
+
+      &:last-child {
+        border-color: $esoptra-color-grey;
+      }
+    }
+  }
+
+  blockquote > p {
+    color: $esoptra-color-white;
+  }
+}
+
+a {
+  color: $esoptra-color-green;
+}
+
+#nav-button {
+  color: $esoptra-color-text-primary;
+}
