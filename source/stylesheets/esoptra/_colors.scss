@@ -1,0 +1,17 @@
+$esoptra-color-black:             #000000;
+$esoptra-color-black-translucent: fade-out($esoptra-color-black, .8);
+$esoptra-color-blue:              #2C404D;
+$esoptra-color-blue-dark:         #132128;
+$esoptra-color-green:             #43EF1F;
+$esoptra-color-grey:              #B5C2C6;
+$esoptra-color-grey-light:        #E8ECED;
+$esoptra-color-white:             #FFFFFF;
+$esoptra-color-white-translucent: fade-out($esoptra-color-white, .8);
+
+$esoptra-color-state-danger:      #E74C3C;
+$esoptra-color-state-info:        #2B73F4;
+$esoptra-color-state-success:     #43EF1F;
+$esoptra-color-state-warning:     #EAA02B;
+
+$esoptra-color-text-primary:      #2C404D;
+$esoptra-color-text-secondary:    #7C898E;

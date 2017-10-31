@@ -1,0 +1,24 @@
+@import 'colors';
+
+$nav-bg:                   $esoptra-color-blue;
+$examples-bg:              $esoptra-color-blue;
+$code-bg:                  $esoptra-color-blue-dark;
+$code-annotation-bg:       $esoptra-color-black-translucent;
+$nav-subitem-bg:           $esoptra-color-black-translucent;
+$nav-active-bg:            $esoptra-color-black-translucent;
+$nav-active-parent-bg:     $esoptra-color-black-translucent;
+$lang-select-bg:           $esoptra-color-blue-dark;
+$lang-select-active-bg:    $esoptra-color-blue;
+$lang-select-pressed-bg:   $esoptra-color-black-translucent;
+$main-bg:                  $esoptra-color-grey-light;
+$aside-notice-bg:          $esoptra-color-state-info;
+$aside-warning-bg:         $esoptra-color-state-warning;
+$aside-success-bg:         $esoptra-color-state-success;
+
+$main-text:                $esoptra-color-text-primary;
+$nav-text:                 $esoptra-color-white;
+$nav-active-text:          $esoptra-color-green;
+$nav-active-parent-text:   $esoptra-color-white;
+$lang-select-text:         $esoptra-color-white;
+$lang-select-active-text:  $esoptra-color-white;
+$lang-select-pressed-text: $esoptra-color-white;
