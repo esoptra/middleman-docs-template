@@ -30,6 +30,21 @@ The usage of a layout is based on the amount of language tabs defined at the top
 
 If you leave the `language_tabs` array empty, the first layout is used. If you specify one or more languages, the second layout will be used.
 
+## Using includes
+
+If the amount of content for a page becomes to big or you want to reuse a specific piece of content, you can use **includes**.
+
+For example:
+
+```markdown
+includes:
+  - include1
+  - include2
+```
+
+will include `./includes/_include1.md` and `./includes/_include2.md` at the bottom of the page.
+
 ## General remarks
 
-- **A page MUST have only ONE H1 heading**, otherwise generating the sub navigation will not work as expected
+- A page **MUST** have only **ONE H1** heading, otherwise generating the secondary navigation will not work as expected.
+- Filenames of includes **MUST** begin with an **underscore**.

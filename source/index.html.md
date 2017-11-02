@@ -1,20 +1,22 @@
 ---
+# The title of the page displayed in the browser tab.
 title: Introduction
 
-language_tabs: # must be one of https://git.io/vQNgJ
+# The language tabs you want to display (must be one of https://git.io/vQNgJ).
+# NOTE: Specifying language tabs will trigger the usage of the second layout (menu - content - code).
+language_tabs:
 
+# Additional links you want to display underneath the main navigation.
 toc_footers:
   - <a href="https://github.com/lord/slate">Documentation Powered by Slate</a>
 
+# If you want to use includes, you can specify them here.
 includes:
 
+# Show/Hide the search field.
 search: true
 ---
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
-
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
-
-This example API documentation page was created with [Slate](https://github.com/lord/slate). Feel free to edit it and use it as a base for your own API's documentation.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
