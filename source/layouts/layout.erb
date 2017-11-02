@@ -29,7 +29,7 @@ under the License.
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title><%= current_page.data.title || "API Documentation" %></title>
+    <title><%= current_page.data.title %> | Esoptra Documentation</title>
 
     <style>
       <%= Rouge::Themes::MonokaiSublime.render(:scope => '.highlight') %>
@@ -66,22 +66,26 @@ under the License.
       <% end %>
       <% if current_page.data.search %>
         <div class="search">
-          <input type="text" class="search" id="input-search" placeholder="Search">
+          <input type="text" class="search" id="input-search" placeholder="Search the current page">
         </div>
         <ul class="search-results"></ul>
       <% end %>
       <ul id="toc" class="toc-list-h1">
-        <% toc_data(page_content).each do |h1| %>
+        <% data.navigation.each do |link| %>
           <li>
-            <a href="#<%= h1[:id] %>" class="toc-h1 toc-link" data-title="<%= h1[:content] %>"><%= h1[:content] %></a>
-            <% if h1[:children].length > 0 %>
-              <ul class="toc-list-h2">
-                <% h1[:children].each do |h2| %>
-                  <li>
-                    <a href="#<%= h2[:id] %>" class="toc-h2 toc-link" data-title="<%= h2[:content] %>"><%= h2[:content] %></a>
-                  </li>
+            <a href="<%= link.file %>" class="toc-h1 toc-link" data-title="<%= link.title %>"><%= link.title %></a>
+            <% if link.file === current_page.path %>
+              <% toc_data(page_content).each do |h1| %>
+                <% if h1[:children].length > 0 %>
+                  <ul class="toc-list-h2">
+                    <% h1[:children].each do |h2| %>
+                      <li>
+                        <a href="#<%= h2[:id] %>" class="toc-h2 toc-link" data-title="<%= h2[:content] %>"><%= h2[:content] %></a>
+                      </li>
+                    <% end %>
+                  </ul>
                 <% end %>
-              </ul>
+              <% end %>
             <% end %>
           </li>
         <% end %>
@@ -94,13 +98,15 @@ under the License.
         </ul>
       <% end %>
     </div>
-    <div class="page-wrapper">
-      <div class="dark-box"></div>
+    <div class="page-wrapper <%= language_tabs.any? ? '' : 'no-code'%>">
+      <% if language_tabs.any? %>
+        <div class="dark-box"></div>
+      <% end %>
       <div class="content">
         <%= page_content %>
       </div>
-      <div class="dark-box">
-        <% if language_tabs.any? %>
+      <% if language_tabs.any? %>
+        <div class="dark-box">
           <div class="lang-selector">
             <% language_tabs.each do |lang| %>
               <% if lang.is_a? Hash %>
@@ -110,8 +116,8 @@ under the License.
               <% end %>
             <% end %>
           </div>
-        <% end %>
-      </div>
+        </div>
+      <% end %>
     </div>
   </body>
 </html>
