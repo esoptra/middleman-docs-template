@@ -32,4 +32,4 @@ If you leave the `language_tabs` array empty, the first layout is used. If you s
 
 ## General remarks
 
-- **A page can have only one H1 heading**, otherwise generating the sub navigation will not work as expected
+- **A page MUST have only ONE H1 heading**, otherwise generating the sub navigation will not work as expected
