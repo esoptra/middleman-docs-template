@@ -1,5 +1,14 @@
 # Esoptra Middleman Docs Template
 
+## Creating a new docs repository
+
+- `git clone git@github.com:esoptra/middleman-docs-template.git new-repository-name`
+- `cd new-repository-name`
+- `git remote rm origin`
+- `git remote add origin git@github.com:esoptra/new-repository-name.git`
+- `git remote add upstream git@github.com:esoptra/middleman-docs-template.git`
+- `git push origin -u master`
+
 ## Introduction
 
 This Middleman template is based on the [Slate](https://github.com/lord/slate) Middleman template. To get things up and running, please read the [README-SLATE.md](./README-SLATE.md) file.
